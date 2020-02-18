@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Mateusz Wasik">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mateusz Wasik</title>
+  </head>
+  <body>
+    <div class="page">
+      <div class="menu">
+        <div class="logo">
+          <span>M</span>
+          <span>A</span>
+          <span>T</span>
+          <span>E</span>
+          <span>U</span>
+          <span>S</span>
+          <span>Z</span>
+          <span>&nbsp;</span>
+          <span>W</span>
+          <span>A</span>
+          <span>S</span>
+          <span>I</span>
+          <span>K</span>
+        </div>
+        <ul class="nav">
+          <div class="indicator"></div>
+          <li data-connect="1" class="li">
+            <a>
+              <div>About me</div>
+              <div>Read about me</div>
+            </a>
+          </li>
+          <li data-connect="2" class="li">
+            <a>
+              <div>My Work</div>
+              <div>Take a look on my projects</div>
+            </a>
+          </li>
+          <li data-connect="3" class="li">
+            <a>
+              <div>Contact me</div>
+              <div>Let's stay in touch</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="wheel">
+        <div>
+          <svg width="440" height="440">
+            <circle class="spin-3" cx="220" cy="220" r="220" stroke="#575b61" stroke-width="2" stroke-dasharray="0 15" stroke-linecap="round" fill="transparent"/>
+            <circle class="spin-1" cx="220" cy="220" r="146" stroke="#13a6dd" stroke-width="1" stroke-dasharray="4 6" stroke-linecap="butt" fill="transparent" />
+            <circle cx="220" cy="220" r="162" stroke="#ffffff" stroke-width="3" fill="transparent" />
+            <circle cx="220" cy="220" r="170" stroke="#13a6dd" stroke-width="1.5" fill="transparent" />
+            <circle class="spin-3" cx="220" cy="220" r="178" stroke="#104064" stroke-width="1.5" stroke-dasharray="100 50" stroke-linecap="round" fill="transparent" />
+            <circle class="spin-2" cx="220" cy="220" r="194" stroke="#0b4f66" stroke-width="18" stroke-dasharray="1 5" stroke-linecap="butt" fill="transparent" />
+          </svg>
+          <div class="circles">
+            <div data-connect="1" class="circle active">
+              <span>About me</span>
+            </div>
+            <div data-connect="3" class="circle">
+              <span>Contact me</span>
+            </div>
+            <div data-connect="2" class="circle">
+              <span>My work</span>
+            </div>
+          </div>
+          <div class="texts">
+            <div data-connect="1" class="text active">
+              <h1>Who am I ?</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+              <a>Read more</a>
+            </div>
+            <div data-connect="3" class="text">
+              <h1>How to find me?</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+              <a>Read more</a>
+            </div>
+            <div data-connect="2" class="text">
+              <h1>What I do ?</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+              <a>Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+
+      var li = document.getElementsByClassName('li');
+
+      for(var i=0; i<li.length; i++)
+      {
+        li[i].addEventListener('click', function()
+        {
+          document.querySelector('div.active.text').classList.remove('active');
+          document.querySelector('div.active.circle').classList.remove('active');
+          document.getElementsByClassName('indicator')[0].style.top = 10 + (parseInt(this.getAttribute('data-connect')) - 1) * 130 + 'px';
+          document.getElementsByClassName('circles')[0].style.transform = 'rotate(' + (parseInt(this.getAttribute('data-connect')) - 1) * 120 + 'deg)';
+          document.querySelector('div.circle[data-connect="' + this.getAttribute('data-connect') + '"]').classList.add('active');
+          document.querySelector('div.text[data-connect="' + this.getAttribute('data-connect') + '"]').classList.add('active');
+        });
+      }
+
+    </script>
+  </body>
+</html>

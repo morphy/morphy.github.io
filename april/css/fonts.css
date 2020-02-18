@@ -1,0 +1,23 @@
+@font-face
+{
+  font-family: "DINWeb";
+  src: url("../fonts/DINWebPro-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face
+{
+  font-family: "DINWeb";
+  src: url("../fonts/DINWebPro-Medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face
+{
+  font-family: "DINWeb";
+  src: url("../fonts/DINWebPro-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+}

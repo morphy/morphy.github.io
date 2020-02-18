@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Mateusz Wasik">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/paddings.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container-fluid bg-green">
+      <div class="row">
+        <div class="col-12 pt-70">
+          <nav>
+            <ul>
+              <li>
+                <a href="index.html">Home</a>
+                <ul class="submenu">
+                  <li>
+                    <a href="index.html#point_1">PHP</a>
+                  </li>
+                  <li>
+                    <a href="index.html#point_2">HTML</a>
+                  </li>
+                  <li>
+                    <a href="index.html#point_3">CSS</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="gallery.html">Gallery</a>
+              </li>
+              <li>
+                <a href="skills.html">My skills</a>
+              </li>
+              <li class="active">
+                <a href="contact.html">Contact me</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-12 pt-80 pb-80">
+          <header>
+            <h1>Mateusz Wasik</h1>
+            <div class="pt-35">
+              <hr>
+            </div>
+            <h2 class="pt-35">Hi, nice to meet you!</h2>
+          </header>
+        </div>
+      </div>
+    </div>
+    <section class="bg-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 has-icon">
+            <div class="icon">
+              <img src="img/eye.svg" alt="Eye">
+            </div>
+            <h2 class="pt-80 pb-40">Please, fill in the form if you want to contact me</h2>
+            <form action="contact.html" method="GET" class="pb-80">
+              <div class="row">
+                <div class="col-6 col-500-12">
+                  <input type="text" name="name" placeholder="Name">
+                </div>
+                <div class="col-6 col-500-12">
+                  <input type="text" name="surname" placeholder="Surname">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-500-12">
+                  <input type="text" name="country" placeholder="Country">
+                </div>
+                <div class="col-6 col-500-12">
+                  <input type="number" name="age" placeholder="Age">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-500-12">
+                  <input type="checkbox" name="month-of-birth">
+                </div>
+                <div class="col-6 col-500-12">
+                  <input type="password" name="day-of-birth">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-500-12">
+                  <input type="email" name="email" placeholder="Email">
+                </div>
+                <div class="col-6 col-500-12">
+                  <input type="file" name="favourite-color">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-500-12">
+                  <input type="reset" value="Clear">
+                </div>
+                <div class="col-6 col-500-12">
+                  <input type="submit" value="Send">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row pb-40">
+          <div class="col-4 col-500-12 pt-35">
+            <a class="round-icon" href="mailto:example@example.com">
+              <img src="img/email.svg" alt="Icon">
+            </a>
+          </div>
+          <div class="col-4 col-500-12 pt-35">
+            <a class="round-icon" href="#">
+              <img src="img/arrow.svg" alt="Icon">
+            </a>
+          </div>
+          <div class="col-4 col-500-12 pt-35">
+            <a class="round-icon" href="tel:+48123456789">
+              <img src="img/phone.svg" alt="Icon">
+            </a>
+          </div>
+        </div>
+        <div class="row pb-40">
+          <div class="col-12">
+            <p id="cpr">Copyright 2018 Mateusz Wasik. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

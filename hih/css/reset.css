@@ -1,0 +1,17 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+body
+{
+  line-height: 1;
+}
+
+ul, ol
+{
+  list-style: none;
+}
