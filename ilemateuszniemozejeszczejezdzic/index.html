@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ile Mateusz nie może jeździć ?</title>
+    <link href="style.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <h1>Jedynie</h1>
+    <div id="ct"></div>
+    <h6>Promocje łączą się</h6>
+    <script>
+
+        function cd() {
+          const diff = +new Date("2020-05-07") - +new Date();
+          let rem = 'At dawn, look to the East!';
+
+          if(diff > 0) {
+            const parts = {
+              dni: Math.floor(diff / (1000 * 60 * 60 * 24)),
+              godzin: Math.floor((diff / (1000 * 60 * 60)) % 24),
+              minut: Math.floor((diff / (1000 * 60)) % 60),
+              sekund: Math.floor((diff / 1000) % 60)
+            };
+
+            rem = Object.keys(parts)
+              .map(part => {
+                return `
+                  <div class="ct-col-number">
+                    <div class="num">
+                      ${parts[part].toString().padStart(2, '0')}
+                    </div>
+                    <div class="nam">
+                      ${part}
+                    </div>
+                  </div>
+                  `;
+              }).join(`
+              <div class="ct-col-colon">
+                :
+              </div>`);
+          }
+
+          document.getElementById('ct').innerHTML = rem;
+        }
+
+        cd();
+        setInterval(cd, 1000);
+
+    </script>
+  </body>
+</html>
