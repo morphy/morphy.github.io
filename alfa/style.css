@@ -41,6 +41,7 @@ html, body
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
+  background-position-y: -580px;
 }
 
 .background
@@ -92,7 +93,6 @@ h3
   font-family: Oswald;
   font-weight: 400;
   font-size: 60px;
-  text-transform: uppercase;
 }
 
 p
