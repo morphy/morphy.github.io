@@ -1,0 +1,1 @@
+window.addEventListener("load",()=>{Array.from(document.getElementsByTagName("button")).forEach(e=>{e.addEventListener("click",e=>{e.target.classList.toggle("bg-green-terminal")})})});
