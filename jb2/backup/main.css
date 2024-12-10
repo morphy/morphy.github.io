@@ -1,0 +1,1 @@
+@tailwind base;@tailwind components;@tailwind utilities;hr{border:0}.inner{transition:max-height .75s ease,padding .75s ease,opacity .325s ease-in-out;max-height:40rem;padding:80px;opacity:1;background-image:radial-gradient(rgba(0,0,0,0.25) 25%,rgba(0,0,0,0) 55%)}.inner-collapsed{max-height:0;padding:0;opacity:0}
