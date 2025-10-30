@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Virus Download Free</title>
+
+    <style>
+      @font-face {
+        font-family: "Comic Sans MS";
+        src: url("comic-sans-ms.ttf") format("truetype");
+      }
+
+      @keyframes blink {
+        0% {
+          opacity: 0;
+        }
+
+        50% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        color: white;
+        background: black;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        align-items: center;
+        justify-content: center;
+
+        > div {
+          width: 100%;
+          max-width: 400px;
+          border: 6px double white;
+          padding: 32px;
+        }
+      }
+
+      form {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+
+      input {
+        grid-column: span 1;
+        width: 100%;
+        aspect-ratio: 1;
+
+        border: 6px double white;
+        font-size: 20px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      input[type="submit"] {
+        grid-column: span 4;
+        aspect-ratio: initial;
+
+        padding: 16px 0;
+        text-transform: none;
+      }
+
+      h1,
+      p {
+        grid-column: span 4;
+        padding: 16px;
+
+        border: 6px double white;
+        text-align: center;
+      }
+
+      p {
+        text-align: left;
+      }
+
+      .red {
+        color: red;
+        border-color: red;
+      }
+
+      .green {
+        color: limegreen;
+        border-color: limegreen;
+      }
+
+      .blink {
+        animation: blink 250ms steps(1, end) 4;
+      }
+
+      .fade-in {
+        animation: fade-in 1500ms 1;
+      }
+
+      p.fade-in {
+        opacity: 0;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form>
+        <h1>Witaj śmiertelniku!</h1>
+
+        <input id="one" type="text" maxlength="1" placeholder="?" />
+
+        <input id="two" type="text" maxlength="1" placeholder="?" />
+
+        <input id="three" type="text" maxlength="1" placeholder="?" />
+
+        <input id="four" type="text" maxlength="1" placeholder="?" />
+
+        <input type="submit" value="Poczyń ofiarę" />
+      </form>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const header = document.querySelector("h1");
+        const form = document.querySelector("form");
+
+        const one = document.querySelector("#one");
+        const two = document.querySelector("#two");
+        const three = document.querySelector("#three");
+        const four = document.querySelector("#four");
+
+        document.querySelector("form").addEventListener("submit", (event) => {
+          event.preventDefault();
+
+          const password = "".concat(
+            one.value,
+            two.value,
+            three.value,
+            four.value
+          );
+
+          if (password.toLowerCase() !== "dupa") {
+            header.innerText = "GŁUPCZE!!!";
+            header.classList.add("red", "blink");
+
+            setTimeout(() => {
+              header.classList.remove("blink");
+            }, 2000);
+
+            return;
+          }
+
+          document.querySelectorAll("input").forEach((input) => {
+            input.remove();
+          });
+
+          header.classList.remove("red", "blink");
+          header.classList.add("green", "fade-in");
+          header.innerText = "Mądryś...";
+
+          const p = document.createElement("p");
+          p.classList.add("fade-in");
+          p.innerText =
+            "Złóż hołd przeklętej dwulicowej bestii z morskich głębin, która tylko czeka na twój błąd, o bardzie z Raciborza!";
+
+          form.appendChild(p);
+        });
+      });
+    </script>
+  </body>
+</html>
